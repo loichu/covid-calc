@@ -48,7 +48,7 @@ fetch('https://static.dwcdn.net/data/BL20V.csv?v=1605854400000')
   for (row of rows1){
     cantonSelect = cantonSelect + '<option value="' + row.cantonInitiale + '">' + row.cantonName + '</option>'
   }
-  cantonSelect = cantonSelect + '</selec>'
+  cantonSelect = cantonSelect + '</select>'
 
   $('.cantondiv').append(cantonSelect)
   $('#canton1 select option[value=VD]')[0].selected=true
@@ -80,7 +80,7 @@ function covid_calc(){
   aucun_malade = aucun_malade_1 * aucun_malade_2 * aucun_malade_3 * aucun_malade_4
   au_moins_un_malade = 1 - aucun_malade
 
-  chance = "Vous avez " + parseInt(au_moins_un_malade*100) + "% de malchance d'avoir au moins un malade du covid lors de votre repas !<br>"
+  chance = "Vous avez " + parseInt(au_moins_un_malade*100) + "% de malchance d'avoir au moins un malade du covid lors de votre repas !<br />"
   console.log(chance )
 
   $('#chance')[0].innerHTML= chance
