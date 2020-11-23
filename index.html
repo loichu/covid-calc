@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>repl.it</title>
+    <title>Covid-Calc</title>
+    <link rel="icon" type="image/png" href="favicon-covid-calc1.png" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <h1 class="align-center">Covid-Calc</h1>
     <h2>Calculateur de risque de contamination lors d'un repas</h2>
 
     <p>
@@ -50,13 +52,37 @@
     </p>
 
     <p>
-        <br>Source d'inspiration:
+        Par exemple, 28%, cela veut dire que l'on a une chance sur trois de se
+        retrouver avec au moins une personne qui a le covid pendant le repas 😉
+    </p>
+
+    <p>
+        Le calculateur se base sur les incidences par cantons sur 14 jours en
+        temps réel du site de la <a href="https://www.rts.ch/info/suisse/11137312-le-coronavirus-en-chiffres-et-en-cartes.html">TSR</a>,
+        elles varient donc de jour en jour !
+    </p>
+
+    <p>
+        Le modèle prend aussi en compte le fait que le nombre réel de
+        contaminations est supérieur de 2 à 5 fois au nombre de tests positifs,
+        l’utilisateur peut calculer le risque en fonction de cette hypothèses. 
+    </p>
+
+    <p>
+        Le code source du calculateur se trouve sur
+        <a href="https://github.com/zuzu59/covid-calc">Github</a>
+    </p>
+
+    <p>
+        <br>Source d'inspiration pour ce calculateur:
         <a href="https://covid19risk.biosci.gatech.edu/">
             https://covid19risk.biosci.gatech.edu/
         </a>
     </p>
 
-    zf201120.1515<br />
+    <p>
+        zf201121.1114
+    </p>
 
     <script 
         src="https://code.jquery.com/jquery-3.2.1.js"

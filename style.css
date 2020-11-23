@@ -14,3 +14,7 @@ body {
 #chance {
   font-weight: bold;
 }
+
+.align-center {
+  text-align: center;
+}
