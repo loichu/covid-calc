@@ -5,9 +5,16 @@ https://www.20min.ch/fr/story/dix-a-table-calculez-le-risque-dattraper-le-virus-
 https://covid19risk.biosci.gatech.edu/ (voir l'onglet tutorial)
 */
 
-console.log("toto")
-
 //https://dev.to/itsjjpowell/retrieving-files-with-the-fetch-api-i5l
+
+const DEBUG = false
+const debug = (msg) => {
+  if (!DEBUG) return null
+  else {
+    console.dir(msg)
+  }
+}
+debug("toto")
 
 var incidence = []
 
@@ -15,7 +22,7 @@ fetch('https://static.dwcdn.net/data/BL20V.csv?v=1605854400000')
 
 .then(response => response.text()) 
 .then(csvString => {
-//  console.log(csvString)
+  debug(csvString)
 
   //Split the csv into rows
   const rows = csvString.split('\n');
@@ -27,7 +34,7 @@ fetch('https://static.dwcdn.net/data/BL20V.csv?v=1605854400000')
   console.log("incidence NE: ", incidence["NE"])
   console.log("incidence VS: ", incidence["VS"])
 
-  console.log("titi")
+  debug("titi")
   rows1 = rows.map((row) => {
     rr = row.split(",")
     return({
